@@ -36,7 +36,7 @@ resource "aws_instance" "test-terra-server" {
 
 # Create a security group to allow port 22,80,443
 resource "aws_security_group" "allow_web" {
-  name        = "allow_web_traffic"
+  name        = "allow_web_traffic_2"
   description = "Allow TLS inbound traffic"
 
   ingress {
