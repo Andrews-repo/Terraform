@@ -15,6 +15,7 @@ provider "aws" {
 }
 
 # create a server
+#https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance
 resource "aws_instance" "test-terra-server" {
   ami           = "ami-04505e74c0741db8d"
   instance_type = "t2.micro"
@@ -35,6 +36,7 @@ resource "aws_instance" "test-terra-server" {
 }
 
 # Create a security group to allow port 22,80,443
+# https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group
 resource "aws_security_group" "allow_web" {
   name        = "allow_web_traffic_2"
   description = "Allow TLS inbound traffic"
